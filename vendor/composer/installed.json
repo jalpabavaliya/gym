@@ -1,6 +1,87 @@
 {
     "packages": [
         {
+            "name": "barryvdh/laravel-snappy",
+            "version": "v1.0.2",
+            "version_normalized": "1.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-snappy.git",
+                "reference": "940eec2d99b89cbc9bea2f493cf068382962a485"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-snappy/zipball/940eec2d99b89cbc9bea2f493cf068382962a485",
+                "reference": "940eec2d99b89cbc9bea2f493cf068382962a485",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^9|^10",
+                "illuminate/support": "^9|^10",
+                "knplabs/knp-snappy": "^1.4",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7|^8"
+            },
+            "time": "2023-04-07T10:38:54+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Snappy\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "PDF": "Barryvdh\\Snappy\\Facades\\SnappyPdf",
+                        "SnappyImage": "Barryvdh\\Snappy\\Facades\\SnappyImage"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Snappy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Snappy PDF/Image for Laravel",
+            "keywords": [
+                "image",
+                "laravel",
+                "pdf",
+                "snappy",
+                "wkhtmltoimage",
+                "wkhtmltopdf"
+            ],
+            "support": {
+                "issues": "https://github.com/barryvdh/laravel-snappy/issues",
+                "source": "https://github.com/barryvdh/laravel-snappy/tree/v1.0.2"
+            },
+            "funding": [
+                {
+                    "url": "https://fruitcake.nl",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/barryvdh",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../barryvdh/laravel-snappy"
+        },
+        {
             "name": "brick/math",
             "version": "0.11.0",
             "version_normalized": "0.11.0.0",
@@ -1146,6 +1227,199 @@
             "install-path": "../guzzlehttp/uri-template"
         },
         {
+            "name": "h4cc/wkhtmltoimage-amd64",
+            "version": "0.12.4",
+            "version_normalized": "0.12.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/h4cc/wkhtmltoimage-amd64.git",
+                "reference": "c4e33f635207af89a704205b8902fb5715ca88be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/h4cc/wkhtmltoimage-amd64/zipball/c4e33f635207af89a704205b8902fb5715ca88be",
+                "reference": "c4e33f635207af89a704205b8902fb5715ca88be",
+                "shasum": ""
+            },
+            "time": "2018-01-15T07:23:40+00:00",
+            "bin": [
+                "bin/wkhtmltoimage-amd64"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL Version 3"
+            ],
+            "authors": [
+                {
+                    "name": "Julius Beckmann",
+                    "email": "github@h4cc.de"
+                }
+            ],
+            "description": "Convert html to image using webkit (qtwebkit). Static linked linux binary for amd64 systems.",
+            "homepage": "http://wkhtmltopdf.org/",
+            "keywords": [
+                "binary",
+                "convert",
+                "image",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltoimage"
+            ],
+            "support": {
+                "issues": "https://github.com/h4cc/wkhtmltoimage-amd64/issues",
+                "source": "https://github.com/h4cc/wkhtmltoimage-amd64/tree/master"
+            },
+            "install-path": "../h4cc/wkhtmltoimage-amd64"
+        },
+        {
+            "name": "h4cc/wkhtmltoimage-i386",
+            "version": "0.12.4",
+            "version_normalized": "0.12.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/h4cc/wkhtmltoimage-i386.git",
+                "reference": "64f7a1c7d1e42d6741e22a080206c00c4899e88b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/h4cc/wkhtmltoimage-i386/zipball/64f7a1c7d1e42d6741e22a080206c00c4899e88b",
+                "reference": "64f7a1c7d1e42d6741e22a080206c00c4899e88b",
+                "shasum": ""
+            },
+            "time": "2018-01-15T07:28:21+00:00",
+            "bin": [
+                "bin/wkhtmltoimage-i386"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL Version 3"
+            ],
+            "authors": [
+                {
+                    "name": "Julius Beckmann",
+                    "email": "github@h4cc.de"
+                }
+            ],
+            "description": "Convert html to image using webkit (qtwebkit). Static linked linux binary for i386 systems.",
+            "homepage": "http://wkhtmltopdf.org/",
+            "keywords": [
+                "binary",
+                "convert",
+                "image",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltoimage"
+            ],
+            "support": {
+                "issues": "https://github.com/h4cc/wkhtmltoimage-i386/issues",
+                "source": "https://github.com/h4cc/wkhtmltoimage-i386/tree/master"
+            },
+            "install-path": "../h4cc/wkhtmltoimage-i386"
+        },
+        {
+            "name": "h4cc/wkhtmltopdf-amd64",
+            "version": "0.12.4",
+            "version_normalized": "0.12.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/h4cc/wkhtmltopdf-amd64.git",
+                "reference": "4e2ab2d032a5d7fbe2a741de8b10b8989523c95b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/h4cc/wkhtmltopdf-amd64/zipball/4e2ab2d032a5d7fbe2a741de8b10b8989523c95b",
+                "reference": "4e2ab2d032a5d7fbe2a741de8b10b8989523c95b",
+                "shasum": ""
+            },
+            "time": "2018-01-15T06:57:33+00:00",
+            "bin": [
+                "bin/wkhtmltopdf-amd64"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "h4cc\\WKHTMLToPDF\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL Version 3"
+            ],
+            "authors": [
+                {
+                    "name": "Julius Beckmann",
+                    "email": "github@h4cc.de"
+                }
+            ],
+            "description": "Convert html to pdf using webkit (qtwebkit). Static linked linux binary for amd64 systems.",
+            "homepage": "http://wkhtmltopdf.org/",
+            "keywords": [
+                "binary",
+                "convert",
+                "pdf",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltopdf"
+            ],
+            "support": {
+                "issues": "https://github.com/h4cc/wkhtmltopdf-amd64/issues",
+                "source": "https://github.com/h4cc/wkhtmltopdf-amd64/tree/master"
+            },
+            "install-path": "../h4cc/wkhtmltopdf-amd64"
+        },
+        {
+            "name": "h4cc/wkhtmltopdf-i386",
+            "version": "0.12.4",
+            "version_normalized": "0.12.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/h4cc/wkhtmltopdf-i386.git",
+                "reference": "da14486ec8eba1873b026b56126ed02d2f2ae5e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/h4cc/wkhtmltopdf-i386/zipball/da14486ec8eba1873b026b56126ed02d2f2ae5e3",
+                "reference": "da14486ec8eba1873b026b56126ed02d2f2ae5e3",
+                "shasum": ""
+            },
+            "time": "2018-01-15T07:18:15+00:00",
+            "bin": [
+                "bin/wkhtmltopdf-i386"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL Version 3"
+            ],
+            "authors": [
+                {
+                    "name": "Julius Beckmann",
+                    "email": "github@h4cc.de"
+                }
+            ],
+            "description": "Convert html to pdf using webkit (qtwebkit). Static linked linux binary for i386 systems.",
+            "homepage": "http://wkhtmltopdf.org/",
+            "keywords": [
+                "binary",
+                "convert",
+                "pdf",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltopdf"
+            ],
+            "support": {
+                "issues": "https://github.com/h4cc/wkhtmltopdf-i386/issues",
+                "source": "https://github.com/h4cc/wkhtmltopdf-i386/tree/master"
+            },
+            "install-path": "../h4cc/wkhtmltopdf-i386"
+        },
+        {
             "name": "hamcrest/hamcrest-php",
             "version": "v2.0.1",
             "version_normalized": "2.0.1.0",
@@ -1198,6 +1472,83 @@
                 "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.0.1"
             },
             "install-path": "../hamcrest/hamcrest-php"
+        },
+        {
+            "name": "knplabs/knp-snappy",
+            "version": "v1.4.2",
+            "version_normalized": "1.4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/snappy.git",
+                "reference": "b66f79334421c26d9c244427963fa2d92980b5d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/snappy/zipball/b66f79334421c26d9c244427963fa2d92980b5d3",
+                "reference": "b66f79334421c26d9c244427963fa2d92980b5d3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "psr/log": "^1.0||^2.0||^3.0",
+                "symfony/process": "~3.4||~4.3||~5.0||~6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16||^3.0",
+                "pedrotroller/php-cs-custom-fixer": "^2.19",
+                "phpstan/phpstan": "^0.12.7",
+                "phpstan/phpstan-phpunit": "^0.12.6",
+                "phpunit/phpunit": "~7.4||~8.5"
+            },
+            "suggest": {
+                "h4cc/wkhtmltoimage-amd64": "Provides wkhtmltoimage-amd64 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "h4cc/wkhtmltoimage-i386": "Provides wkhtmltoimage-i386 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "h4cc/wkhtmltopdf-amd64": "Provides wkhtmltopdf-amd64 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "h4cc/wkhtmltopdf-i386": "Provides wkhtmltopdf-i386 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "wemersonjanuario/wkhtmltopdf-windows": "Provides wkhtmltopdf executable for Windows, use version `~0.12` as dependency"
+            },
+            "time": "2023-03-17T14:47:54+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Snappy\\": "src/Knp/Snappy"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KNP Labs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/snappy/contributors"
+                }
+            ],
+            "description": "PHP library allowing thumbnail, snapshot or PDF generation from a url or a html page. Wrapper for wkhtmltopdf/wkhtmltoimage.",
+            "homepage": "http://github.com/KnpLabs/snappy",
+            "keywords": [
+                "knp",
+                "knplabs",
+                "pdf",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltopdf"
+            ],
+            "support": {
+                "issues": "https://github.com/KnpLabs/snappy/issues",
+                "source": "https://github.com/KnpLabs/snappy/tree/v1.4.2"
+            },
+            "install-path": "../knplabs/knp-snappy"
         },
         {
             "name": "laravel/framework",
@@ -1793,6 +2144,147 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.8.2"
             },
             "install-path": "../laravel/tinker"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v4.2.2",
+            "version_normalized": "4.2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "a58ec468db4a340b33f3426c778784717a2c144b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/a58ec468db4a340b33f3426c778784717a2c144b",
+                "reference": "a58ec468db4a340b33f3426c778784717a2c144b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^9.21|^10.0",
+                "illuminate/filesystem": "^9.21|^10.0",
+                "illuminate/support": "^9.21|^10.0",
+                "illuminate/validation": "^9.21|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0|^8.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "time": "2023-05-09T19:47:28+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/ui/tree/v4.2.2"
+            },
+            "install-path": "../laravel/ui"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v6.4.1",
+            "version_normalized": "6.4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "64ddfdcaeeb8d332bd98bef442bef81e39c3910b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/64ddfdcaeeb8d332bd98bef442bef81e39c3910b",
+                "reference": "64ddfdcaeeb8d332bd98bef442bef81e39c3910b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/session": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/view": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~8.5|^9.5.10"
+            },
+            "time": "2023-04-25T02:46:11+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/LaravelCollective/html/issues",
+                "source": "https://github.com/LaravelCollective/html"
+            },
+            "abandoned": "spatie/laravel-html",
+            "install-path": "../laravelcollective/html"
         },
         {
             "name": "league/commonmark",
@@ -3496,17 +3988,17 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.3.2",
-            "version_normalized": "10.3.2.0",
+            "version": "10.3.3",
+            "version_normalized": "10.3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "0dafb1175c366dd274eaa9a625e914451506bcd1"
+                "reference": "241ed4dd0db1c096984e62d414c4e1ac8d5dbff4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0dafb1175c366dd274eaa9a625e914451506bcd1",
-                "reference": "0dafb1175c366dd274eaa9a625e914451506bcd1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/241ed4dd0db1c096984e62d414c4e1ac8d5dbff4",
+                "reference": "241ed4dd0db1c096984e62d414c4e1ac8d5dbff4",
                 "shasum": ""
             },
             "require": {
@@ -3540,7 +4032,7 @@
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
             },
-            "time": "2023-08-15T05:34:23+00:00",
+            "time": "2023-09-05T04:34:51+00:00",
             "bin": [
                 "phpunit"
             ],
@@ -3580,7 +4072,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.3.2"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.3.3"
             },
             "funding": [
                 {
@@ -5624,6 +6116,91 @@
                 }
             ],
             "install-path": "../spatie/laravel-ignition"
+        },
+        {
+            "name": "spatie/laravel-permission",
+            "version": "5.11.0",
+            "version_normalized": "5.11.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "0a35e99da4cb6f85b07b3b58b718ff659c39a009"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/0a35e99da4cb6f85b07b3b58b718ff659c39a009",
+                "reference": "0a35e99da4cb6f85b07b3b58b718ff659c39a009",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "^7.0|^8.0|^9.0|^10.0",
+                "illuminate/container": "^7.0|^8.0|^9.0|^10.0",
+                "illuminate/contracts": "^7.0|^8.0|^9.0|^10.0",
+                "illuminate/database": "^7.0|^8.0|^9.0|^10.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.0|^6.0|^7.0|^8.0",
+                "phpunit/phpunit": "^9.4",
+                "predis/predis": "^1.1"
+            },
+            "time": "2023-08-30T23:41:24+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "5.x-dev",
+                    "dev-master": "5.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Permission\\PermissionServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Spatie\\Permission\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Permission handling for Laravel 6.0 and up",
+            "homepage": "https://github.com/spatie/laravel-permission",
+            "keywords": [
+                "acl",
+                "laravel",
+                "permission",
+                "permissions",
+                "rbac",
+                "roles",
+                "security",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/5.11.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../spatie/laravel-permission"
         },
         {
             "name": "symfony/console",
@@ -8368,6 +8945,255 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "install-path": "../webmozart/assert"
+        },
+        {
+            "name": "yajra/laravel-datatables-buttons",
+            "version": "v10.0.7",
+            "version_normalized": "10.0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables-buttons.git",
+                "reference": "f43f6eb501af2fbbb78d2b2985a9da992af768bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/f43f6eb501af2fbbb78d2b2985a9da992af768bd",
+                "reference": "f43f6eb501af2fbbb78d2b2985a9da992af768bd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^10",
+                "php": "^8.1",
+                "yajra/laravel-datatables-html": "^10",
+                "yajra/laravel-datatables-oracle": "^10"
+            },
+            "require-dev": {
+                "barryvdh/laravel-snappy": "^1.0.1",
+                "maatwebsite/excel": "^3.1.46",
+                "nunomaduro/larastan": "^2.4",
+                "orchestra/testbench": "^8",
+                "rap2hpoutre/fast-excel": "^5.1"
+            },
+            "suggest": {
+                "barryvdh/laravel-snappy": "Allows exporting of dataTable to PDF using the print view.",
+                "dompdf/dompdf": "Allows exporting of dataTable to PDF using the DomPDF.",
+                "maatwebsite/excel": "Exporting of dataTables (excel, csv and PDF) using maatwebsite package.",
+                "rap2hpoutre/fast-excel": "Faster exporting of dataTables using fast-excel package.",
+                "yajra/laravel-datatables-export": "Exporting of dataTables (excel, csv and PDF) via livewire and queue worker."
+            },
+            "time": "2023-07-31T03:19:53+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\DataTables\\ButtonsServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\DataTables\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "Laravel DataTables Buttons Plugin.",
+            "keywords": [
+                "buttons",
+                "datatables",
+                "jquery",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/yajra/laravel-datatables-buttons/issues",
+                "source": "https://github.com/yajra/laravel-datatables-buttons/tree/v10.0.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/yajra",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../yajra/laravel-datatables-buttons"
+        },
+        {
+            "name": "yajra/laravel-datatables-html",
+            "version": "v10.8.1",
+            "version_normalized": "10.8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables-html.git",
+                "reference": "31500e3fd0ea6c18153a4122eb001abf6f04dd2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-html/zipball/31500e3fd0ea6c18153a4122eb001abf6f04dd2a",
+                "reference": "31500e3fd0ea6c18153a4122eb001abf6f04dd2a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^8.1",
+                "yajra/laravel-datatables-oracle": "^10.0"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^2.4",
+                "orchestra/testbench": "^7.21"
+            },
+            "time": "2023-08-16T05:20:32+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\DataTables\\HtmlServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\DataTables\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "Laravel DataTables HTML builder plugin for Laravel 5.4+.",
+            "keywords": [
+                "JS",
+                "datatables",
+                "html",
+                "jquery",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/yajra/laravel-datatables-html/issues",
+                "source": "https://github.com/yajra/laravel-datatables-html/tree/v10.8.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/yajra",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/yajra",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/yajra",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../yajra/laravel-datatables-html"
+        },
+        {
+            "name": "yajra/laravel-datatables-oracle",
+            "version": "v10.8.0",
+            "version_normalized": "10.8.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "9165711838eb0c503efad380551673d92e089e12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/9165711838eb0c503efad380551673d92e089e12",
+                "reference": "9165711838eb0c503efad380551673d92e089e12",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9|^10",
+                "illuminate/filesystem": "^9|^10",
+                "illuminate/http": "^9|^10",
+                "illuminate/support": "^9|^10",
+                "illuminate/view": "^9|^10",
+                "php": "^8.0.2"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^2.4",
+                "orchestra/testbench": "^8",
+                "yajra/laravel-datatables-html": "^9.3.4|^10"
+            },
+            "suggest": {
+                "yajra/laravel-datatables-buttons": "Plugin for server-side exporting of dataTables.",
+                "yajra/laravel-datatables-editor": "Plugin to use DataTables Editor (requires a license).",
+                "yajra/laravel-datatables-export": "Plugin for server-side exporting using livewire and queue worker.",
+                "yajra/laravel-datatables-fractal": "Plugin for server-side response using Fractal.",
+                "yajra/laravel-datatables-html": "Plugin for server-side HTML builder of dataTables."
+            },
+            "time": "2023-08-12T02:08:05+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\DataTables\\DataTablesServiceProvider"
+                    ],
+                    "aliases": {
+                        "DataTables": "Yajra\\DataTables\\Facades\\DataTables"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ],
+                "psr-4": {
+                    "Yajra\\DataTables\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "jQuery DataTables API for Laravel 4|5|6|7|8|9|10",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/yajra/laravel-datatables/issues",
+                "source": "https://github.com/yajra/laravel-datatables/tree/v10.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/yajra",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../yajra/laravel-datatables-oracle"
         }
     ],
     "dev": true,
