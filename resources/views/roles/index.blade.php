@@ -1,172 +1,92 @@
-@include('layouts.header')
-<div class="row">
-    <div class="col-lg-12 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Striped Table</h4>
-                <p class="card-description">
-                    Add class <code>.table-striped</code>
-                </p>
-                <div class="table-responsive">
-                    <!-- <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>
-                                    User
-                                </th>
-                                <th>
-                                    First name
-                                </th>
-                                <th>
-                                    Progress
-                                </th>
-                                <th>
-                                    Amount
-                                </th>
-                                <th>
-                                    Deadline
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face1.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Herman Beck
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face2.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Messsy Adam
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $245.30
-                                </td>
-                                <td>
-                                    July 1, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face3.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    John Richards
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $138.00
-                                </td>
-                                <td>
-                                    Apr 12, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face4.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Peter Meggik
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face5.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Edward
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 160.25
-                                </td>
-                                <td>
-                                    May 03, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face6.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    John Doe
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 123.21
-                                </td>
-                                <td>
-                                    April 05, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face7.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Henry Tom
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 150.00
-                                </td>
-                                <td>
-                                    June 16, 2015
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> -->
-                </div>
+@extends('layouts.header')
+@section('sidebar')
+<li class="nav-item">
+    <a class="nav-link" href="{{ url('home') }}">
+        <i class="icon-grid menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+    </a>
+</li>
+
+@can('role-list')
+<li class="nav-item active">
+    <a class="nav-link" href="{{ url('roles') }}">
+        <i class="fa-solid fa-users-gear menu-icon"></i>
+        <span class="menu-title">Role Management</span>
+    </a>
+</li>
+@endcan
+
+<li class="nav-item">
+    <a class="nav-link" href="{{ url('users') }}">
+        <i class="icon-head  menu-icon"></i>
+        <span class="menu-title">User Management</span>
+    </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
+    <i class="icon-layout menu-icon"></i>
+    <span class="menu-title">Master Libraries</span>
+    <i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-basic1">
+    <ul class="nav flex-column sub-menu">
+        <li class="nav-item"> <a class="nav-link" href="{{ url('tags') }}">Tags</a></li>
+        <li class="nav-item"> <a class="nav-link" href="{{ url('exercise_categories') }}">Exercise Categories</a></li>
+    </ul>
+</div>
+</li>
+
+@endsection
+@section('content')
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2>Role Management</h2>
+            </div>
+            <div class="pull-right">
+                @can('role-create')
+                <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
+                @endcan
+            </div>
+        </div>
+    </div>
+    <br>
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
+    @endif
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Role Management</h4>
+                    <table class="table table-striped">
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th width="280px">Action</th>
+                        </tr>
+                        @foreach ($roles as $key => $role)
+                        <tr>
+                            <td>{{ ++$i }}</td>
+                            <td>{{ $role->name }}</td>
+                            <td>
+                                @can('role-edit')
+                                <a href="{{ route('roles.edit',$role->id) }}"><i class="fa fa-pencil aria-hidden=" true" "></i></a>
+                            @endcan
+                            @can('role-delete')
+                            &nbsp;&nbsp;&nbsp;<a href=" {{ route('roles.destroy',$role->id) }}"><i class="fa fa-trash aria-hidden=" true" "></i></a>
+                            @endcan
+                        </td>
+                    </tr>
+                    @endforeach
+                </table>
             </div>
         </div>
     </div>
 </div>
-@include('layouts.footer');
+</div>
+@endsection

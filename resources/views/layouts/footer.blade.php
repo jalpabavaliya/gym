@@ -36,13 +36,14 @@
   <!-- Custom js for this page-->
   <script src="js/dashboard.js"></script>
   <script src="js/Chart.roundedBarCharts.js"></script>
+
   <!-- End custom js for this page-->
 </body>
 
 </html>
 
 <style>
-    .navbar .navbar-brand-wrapper .navbar-brand img {
+    /* .navbar .navbar-brand-wrapper .navbar-brand img {
     max-width: 100%;
     height: 60px;
     margin: auto;
@@ -51,7 +52,7 @@
 
 .btn-success {
     color: #fff;
-    background-color: #231717;
-    border-color: #231717;
-}
+    background-color: #6DA12F;
+    border-color: #6DA12F;
+} */
 </style>
