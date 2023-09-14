@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Exercise extends Model
 {
     use HasFactory;
+    protected $fillable = ['title','type','tag','description','instructions','video_url'];
 }

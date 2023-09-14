@@ -9,6 +9,7 @@ use App\Http\Controllers\TagsController;
 use App\Http\Controllers\ExerciseCategories;
 use App\Http\Controllers\MealCategoriesController;
 use App\Http\Controllers\MealController;
+use App\Http\Controllers\WorkOutsController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -78,12 +79,22 @@ Route::get('exercise_categories/create', [ExerciseCategories::class, 'create'])-
 Route::post('exercise_categories/store', [ExerciseCategories::class, 'store'])->name('exercise_categories.store');
 
 Route::get('exercises', [ExerciseCategories::class, 'index']);
-Route::get('exercises', [ExerciseCategories::class, 'index'])->name('exercises.index');
-Route::get('exercises/edit/{id}', [ExerciseCategories::class, 'edit'])->name('exercises.edit');
-Route::patch('exercises/update/{id}', [ExerciseCategories::class, 'update'])->name('exercises.update');
-Route::get('exercises/delete/{id}', [ExerciseCategories::class, 'destroy'])->name('exercises.destroy');
-Route::get('exercises/create', [ExerciseCategories::class, 'create'])->name('exercises.create');
-Route::post('exercises/store', [ExerciseCategories::class, 'store'])->name('exercises.store');
+Route::get('exercises', [ExerciseCategories::class, 'index'])->name('exercise.index');
+Route::get('exercises/edit/{id}', [ExerciseCategories::class, 'edit'])->name('exercise.edit');
+Route::patch('exercises/update/{id}', [ExerciseCategories::class, 'update'])->name('exercise.update');
+Route::get('exercises/delete/{id}', [ExerciseCategories::class, 'destroy'])->name('exercise.destroy');
+Route::get('exercises/create', [ExerciseCategories::class, 'create'])->name('exercise.create');
+Route::post('exercises/store', [ExerciseCategories::class, 'store'])->name('exercise.store');
+
+Route::get('workouts', [WorkOutsController::class, 'index']);
+Route::get('workouts', [WorkOutsController::class, 'index'])->name('workouts.index');
+Route::get('workouts/edit/{id}', [WorkOutsController::class, 'edit'])->name('workouts.edit');
+Route::patch('workouts/update/{id}', [WorkOutsController::class, 'update'])->name('workouts.update');
+Route::get('workouts/delete/{id}', [WorkOutsController::class, 'destroy'])->name('workouts.destroy');
+Route::get('workouts/create', [WorkOutsController::class, 'create'])->name('workouts.create');
+Route::post('workouts/store', [WorkOutsController::class, 'store'])->name('workouts.store');
+Route::get('workouts/list', [WorkOutsController::class, 'getWorkouts'])->name('workouts.list');
+
 
 Route::get('meal-category', [MealCategoriesController::class, 'index']);
 Route::get('meal-category', [MealCategoriesController::class, 'index'])->name('meal-category.index');

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ExerciseCategory;
+use App\Models\Exercise;
 use DB;
 
 class ExerciseCategories extends Controller
@@ -15,10 +15,11 @@ class ExerciseCategories extends Controller
      */
     public function index(Request $request)
     {
-        $exercise_categories = ExerciseCategory::orderBy('id','DESC')->paginate(5);
-        return view('exercise_categories.index',compact('exercise_categories'))
-            ->with('i', ($request->input('page', 1) - 1) * 5);
+        $exercise = Exercise::orderBy('id','DESC')->paginate(50000000000000);
+        return view('exercise.index',compact('exercise'))
+            ->with('i', ($request->input('page', 1) - 1) * 50000000000000);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -27,8 +28,8 @@ class ExerciseCategories extends Controller
      */
     public function create()
     {
-        $list = ExerciseCategory::get();
-        return view('exercise_categories.create',compact('list'));
+        $list = Exercise::get();
+        return view('exercise.create',compact('list'));
     }
 
     /**
@@ -39,12 +40,33 @@ class ExerciseCategories extends Controller
      */
     public function store(Request $request)
     {
+     
         $this->validate($request, [
-            'name' => 'required|unique:exercise_categories,name',
+            'title' => 'required',
+            'type' => 'required',
+            'instructions' => 'required',
+            'description' => 'required',
+            'video_url' => 'required',
         ]);
-        ExerciseCategory::create(['name' => $request->input('name')]);
-        return redirect()->route('exercise_categories.index')
-                        ->with('success','Exercise Category created successfully');
+        $url = "";
+        if(isset($request->video_url)){
+            $originalString = $request->video_url;
+            $array = collect(explode("?v=", $originalString));
+            $url = $array[1];
+        }
+    
+        Exercise::create(
+            [
+                'title' => $request->input('title'),
+                'type' => $request->input('type'),
+                'instructions' => $request->input('instructions'),
+                'description' => $request->input('description'),
+                'tag' => isset($request->tags) ? implode(",",$request->tags) : '',
+                'video_url' => $url
+            ]
+        );
+        return redirect()->route('exercise.index')
+                        ->with('success','Exercise created successfully');
     }
     /**
      * Display the specified resource.
@@ -54,8 +76,8 @@ class ExerciseCategories extends Controller
      */
     public function show($id)
     {
-        $exercise_categories = ExerciseCategory::find($id);
-        return view('exercise_categories.show',compact('exercise_categories'));
+        $exercise = Exercise::find($id);
+        return view('exercise.show',compact('exercise'));
     }
 
     /**
@@ -66,8 +88,9 @@ class ExerciseCategories extends Controller
      */
     public function edit($id)
     {
-        $exercise_categories = ExerciseCategory::find($id);
-        return view('exercise_categories.edit',compact('exercise_categories'));
+        $exercise = Exercise::find($id);
+        $exercise->tag = explode(',',$exercise->tag);
+        return view('exercise.edit',compact('exercise'));
     }
 
     /**
@@ -80,14 +103,28 @@ class ExerciseCategories extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required',
+            'title' => 'required',
+            'type' => 'required',
+            'instructions' => 'required',
+            'description' => 'required',
+            'video_url' => 'required',
         ]);
-
-        $tags = ExerciseCategory::find($id);
-        $tags->name = $request->input('name');
-        $tags->save();
-        return redirect()->route('exercise_categories.index')
-                        ->with('success','Exercise Category updated successfully');
+        $url = "";
+        if(isset($request->video_url)){
+            $originalString = $request->video_url;
+            $array = collect(explode("?v=", $originalString));
+            $url = $array[1];
+        }
+        $exercise = Exercise::find($id);
+        $exercise->title = $request->input('title');
+        $exercise->type = $request->input('type');
+        $exercise->instructions = $request->input('instructions');
+        $exercise->description = $request->input('description');
+        $exercise->tag = isset($request->tags) ? implode(",",$request->tags) : '';
+        $exercise->video_url = $url;
+        $exercise->save();
+        return redirect()->route('exercise.index')
+                        ->with('success','Exercise updated successfully');
     }
     /**
      * Remove the specified resource from storage.
@@ -97,8 +134,8 @@ class ExerciseCategories extends Controller
      */
     public function destroy($id)
     {
-        DB::table("exercise_categories")->where('id',$id)->delete();
-        return redirect()->route('exercise_categories.index')
-                        ->with('success','Exercise Category deleted successfully');
+        DB::table("exercises")->where('id',$id)->delete();
+        return redirect()->route('exercise.index')
+                        ->with('success','Exercise deleted successfully');
     }
 }
