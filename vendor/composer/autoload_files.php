@@ -39,4 +39,7 @@ return array(
     'ec07570ca5a812141189b1fa81503674' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     '320163ac6b93aebe3dc25b60a0533d56' => $vendorDir . '/spatie/laravel-ignition/src/helpers.php',
     '377b22b161c09ed6e5152de788ca020a' => $vendorDir . '/spatie/laravel-permission/src/helpers.php',
+    '37efcf4b38f2e77789b09da04b892bff' => $baseDir . '/app/CPU/helpers.php',
+    '5db82252215435aaa9946688db025aa8' => $baseDir . '/app/CPU/image-manager.php',
+    'fb6ef1f2159f04ab2987121de0c18af3' => $baseDir . '/app/CPU/cart-manager.php',
 );

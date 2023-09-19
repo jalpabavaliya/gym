@@ -7,6 +7,7 @@ use App\Http\Controllers\TrainerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\ExerciseCategories;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\MealCategoriesController;
 use App\Http\Controllers\MealController;
 use App\Http\Controllers\WorkOutsController;
@@ -113,6 +114,14 @@ Route::get('meal/delete/{id}', [MealController::class, 'destroy'])->name('meal.d
 Route::get('meal/create', [MealController::class, 'create'])->name('meal.create');
 Route::post('meal/store', [MealController::class, 'store'])->name('meal.store');
 Route::get('meal/list', [MealController::class, 'getMeal'])->name('meal.list');
+
+Route::get('food', [FoodController::class, 'index']);
+Route::get('food', [FoodController::class, 'index'])->name('food.index');
+Route::get('food/edit/{id}', [FoodController::class, 'edit'])->name('food.edit');
+// Route::patch('food/update/{id}', [FoodController::class, 'update'])->name('food.update');
+Route::get('food/delete/{id}', [FoodController::class, 'destroy'])->name('food.destroy');
+Route::post('food/store', [FoodController::class, 'store'])->name('food.store');
+Route::get('food/list', [FoodController::class, 'getFood'])->name('food.list');
 
 // Route::post('/save-token', [App\Http\Controllers\HomeController::class, 'saveToken'])->name('save-token');
 // Route::post('/send-notification', [App\Http\Controllers\HomeController::class, 'sendNotification'])->name('send.notification');

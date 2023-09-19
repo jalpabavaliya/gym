@@ -40,6 +40,9 @@ class ComposerStaticInit77b782ed419e16242afb1c8eea2d3f50
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
+        '37efcf4b38f2e77789b09da04b892bff' => __DIR__ . '/../..' . '/app/CPU/helpers.php',
+        '5db82252215435aaa9946688db025aa8' => __DIR__ . '/../..' . '/app/CPU/image-manager.php',
+        'fb6ef1f2159f04ab2987121de0c18af3' => __DIR__ . '/../..' . '/app/CPU/cart-manager.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -208,9 +211,9 @@ class ComposerStaticInit77b782ed419e16242afb1c8eea2d3f50
         ),
         'Yajra\\DataTables\\' => 
         array (
-            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
+            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
             1 => __DIR__ . '/..' . '/yajra/laravel-datatables-html/src',
-            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
+            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
         ),
         'Whoops\\' => 
         array (
@@ -589,6 +592,7 @@ class ComposerStaticInit77b782ed419e16242afb1c8eea2d3f50
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ExerciseCategories' => __DIR__ . '/../..' . '/app/Http/Controllers/ExerciseCategories.php',
+        'App\\Http\\Controllers\\FoodController' => __DIR__ . '/../..' . '/app/Http/Controllers/FoodController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\MealCategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/MealCategoriesController.php',
         'App\\Http\\Controllers\\MealController' => __DIR__ . '/../..' . '/app/Http/Controllers/MealController.php',
@@ -596,6 +600,7 @@ class ComposerStaticInit77b782ed419e16242afb1c8eea2d3f50
         'App\\Http\\Controllers\\TagsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TagsController.php',
         'App\\Http\\Controllers\\TrainerController' => __DIR__ . '/../..' . '/app/Http/Controllers/TrainerController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
+        'App\\Http\\Controllers\\WorkOutsController' => __DIR__ . '/../..' . '/app/Http/Controllers/WorkOutsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -608,12 +613,14 @@ class ComposerStaticInit77b782ed419e16242afb1c8eea2d3f50
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Mail\\SendMail' => __DIR__ . '/../..' . '/app/Mail/SendMail.php',
         'App\\Models\\Exercise' => __DIR__ . '/../..' . '/app/Models/Exercise.php',
-        'App\\Models\\ExerciseCategory' => __DIR__ . '/../..' . '/app/Models/ExerciseCategory.php',
+        'App\\Models\\Food' => __DIR__ . '/../..' . '/app/Models/Food.php',
         'App\\Models\\Meal' => __DIR__ . '/../..' . '/app/Models/Meal.php',
         'App\\Models\\MealCategories' => __DIR__ . '/../..' . '/app/Models/MealCategories.php',
+        'App\\Models\\Meal_old123' => __DIR__ . '/../..' . '/app/Models/Meal_old123.php',
         'App\\Models\\Tags' => __DIR__ . '/../..' . '/app/Models/Tags.php',
         'App\\Models\\Trainer' => __DIR__ . '/../..' . '/app/Models/Trainer.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\WorkOut' => __DIR__ . '/../..' . '/app/Models/WorkOut.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -4856,6 +4863,7 @@ class ComposerStaticInit77b782ed419e16242afb1c8eea2d3f50
         'Psy\\CodeCleaner\\ValidFunctionNamePass' => __DIR__ . '/..' . '/psy/psysh/src/CodeCleaner/ValidFunctionNamePass.php',
         'Psy\\Command\\BufferCommand' => __DIR__ . '/..' . '/psy/psysh/src/Command/BufferCommand.php',
         'Psy\\Command\\ClearCommand' => __DIR__ . '/..' . '/psy/psysh/src/Command/ClearCommand.php',
+        'Psy\\Command\\CodeArgumentParser' => __DIR__ . '/..' . '/psy/psysh/src/Command/CodeArgumentParser.php',
         'Psy\\Command\\Command' => __DIR__ . '/..' . '/psy/psysh/src/Command/Command.php',
         'Psy\\Command\\DocCommand' => __DIR__ . '/..' . '/psy/psysh/src/Command/DocCommand.php',
         'Psy\\Command\\DumpCommand' => __DIR__ . '/..' . '/psy/psysh/src/Command/DumpCommand.php',

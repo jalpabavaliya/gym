@@ -48,6 +48,7 @@
             <ul class="nav flex-column sub-menu"><b style="color: white">NUTRITION</b>
                 <li class="nav-item"> <a class="nav-link" href="{{ url('meal-category') }}">Meals Categories</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{ url('meal') }}">Meals</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('food') }}">Foods</a></li>
             </ul>
         </div>
     </li>

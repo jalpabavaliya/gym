@@ -1475,17 +1475,17 @@
         },
         {
             "name": "knplabs/knp-snappy",
-            "version": "v1.4.3",
-            "version_normalized": "1.4.3.0",
+            "version": "v1.4.4",
+            "version_normalized": "1.4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/snappy.git",
-                "reference": "d3b742d61a68bf93866032c2c0a7f1486128b67e"
+                "reference": "3db13fe45d12a7bccb2b83f622e5a90f7e40b111"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/snappy/zipball/d3b742d61a68bf93866032c2c0a7f1486128b67e",
-                "reference": "d3b742d61a68bf93866032c2c0a7f1486128b67e",
+                "url": "https://api.github.com/repos/KnpLabs/snappy/zipball/3db13fe45d12a7bccb2b83f622e5a90f7e40b111",
+                "reference": "3db13fe45d12a7bccb2b83f622e5a90f7e40b111",
                 "shasum": ""
             },
             "require": {
@@ -1507,7 +1507,7 @@
                 "h4cc/wkhtmltopdf-i386": "Provides wkhtmltopdf-i386 binary for Linux-compatible machines, use version `~0.12` as dependency",
                 "wemersonjanuario/wkhtmltopdf-windows": "Provides wkhtmltopdf executable for Windows, use version `~0.12` as dependency"
             },
-            "time": "2023-09-06T15:24:48+00:00",
+            "time": "2023-09-13T12:18:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1546,23 +1546,23 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/snappy/issues",
-                "source": "https://github.com/KnpLabs/snappy/tree/v1.4.3"
+                "source": "https://github.com/KnpLabs/snappy/tree/v1.4.4"
             },
             "install-path": "../knplabs/knp-snappy"
         },
         {
             "name": "laravel/framework",
-            "version": "v10.23.0",
-            "version_normalized": "10.23.0.0",
+            "version": "v10.23.1",
+            "version_normalized": "10.23.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7d6a79ce8ff52a4d0d385ac290dcc048aa514ce7"
+                "reference": "dbfd495557678759153e8d71cc2f6027686ca51e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7d6a79ce8ff52a4d0d385ac290dcc048aa514ce7",
-                "reference": "7d6a79ce8ff52a4d0d385ac290dcc048aa514ce7",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/dbfd495557678759153e8d71cc2f6027686ca51e",
+                "reference": "dbfd495557678759153e8d71cc2f6027686ca51e",
                 "shasum": ""
             },
             "require": {
@@ -1662,7 +1662,7 @@
                 "league/flysystem-read-only": "^3.3",
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.5.1",
-                "orchestra/testbench-core": "^8.4",
+                "orchestra/testbench-core": "^8.10",
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpstan": "^1.4.7",
                 "phpunit/phpunit": "^10.0.7",
@@ -1707,7 +1707,7 @@
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^6.2).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0)."
             },
-            "time": "2023-09-12T15:55:31+00:00",
+            "time": "2023-09-13T14:51:46+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4530,17 +4530,17 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.20",
-            "version_normalized": "0.11.20.0",
+            "version": "v0.11.21",
+            "version_normalized": "0.11.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "0fa27040553d1d280a67a4393194df5228afea5b"
+                "reference": "bcb22101107f3bf770523b65630c9d547f60c540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0fa27040553d1d280a67a4393194df5228afea5b",
-                "reference": "0fa27040553d1d280a67a4393194df5228afea5b",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/bcb22101107f3bf770523b65630c9d547f60c540",
+                "reference": "bcb22101107f3bf770523b65630c9d547f60c540",
                 "shasum": ""
             },
             "require": {
@@ -4563,7 +4563,7 @@
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well.",
                 "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history."
             },
-            "time": "2023-07-31T14:32:22+00:00",
+            "time": "2023-09-17T21:15:54+00:00",
             "bin": [
                 "bin/psysh"
             ],
@@ -4571,6 +4571,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-main": "0.11.x-dev"
+                },
+                "bamarni-bin": {
+                    "bin-links": false,
+                    "forward-command": false
                 }
             },
             "installation-source": "dist",
@@ -4603,7 +4607,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.20"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.21"
             },
             "install-path": "../psy/psysh"
         },
