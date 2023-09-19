@@ -6,7 +6,7 @@
             <span class="menu-title">Dashboard</span>
         </a>
     </li>
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="icon-grid menu-icon"></i>
             <span class="menu-title">Messages</span>
@@ -17,7 +17,7 @@
             <i class="icon-grid menu-icon"></i>
             <span class="menu-title">Groups</span>
         </a>
-    </li>
+    </li> --}}
     @can('role-list')
         <li class="nav-item">
             <a class="nav-link" href="{{ url('roles') }}">
@@ -32,7 +32,7 @@
             <span class="menu-title">User Management</span>
         </a>
     </li>
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
             <i class="icon-layout menu-icon"></i>
             <span class="menu-title">Master Libraries</span>
@@ -51,7 +51,7 @@
                 <li class="nav-item"> <a class="nav-link" href="{{ url('food') }}">Foods</a></li>
             </ul>
         </div>
-    </li>
+    </li> --}}
 @endsection
 @section('content')
     <div class="content-wrapper">
